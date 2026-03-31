@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: Product Dimension. One row per product.
+    columns:
+      - name: productkey
+        description: The surrogate key of the product
+        tests:
+          - not_null
+          - unique
+      - name: productid
+        description: The business / source key of the product
+        tests:
+          - not_null
+          - unique
+      - name: productname
+        description: product name
+      - name: quantityperunit
+        description: quantity per unit sold
+      - name: unitprice
+        description: price
+      - name: categoryname
+        description: product category name
+      - name: suppliername
+        description: name of supplier
+      - name: discontinued
+        description: shows if product was discontinued or not
